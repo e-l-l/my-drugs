@@ -16,9 +16,9 @@ export const Navbar = () => {
           <img src={md} alt="logo" className="h-14" />
           <span>myDrugs</span>
         </div>
-        <ul className="md:flex md:items-center font-spacemono">
+        <ul className="md:flex md:items-center font-spacemono md:pb-0 pb:12 md:static absolute bg-[#13161E] md:z-auto z-[-1] left-0 w-full md:w-auto">
           {Links.map((link) => (
-            <li className="md:ml-8 text-sm">
+            <li className="md:ml-8 text-sm md:my-0 my-7">
               <a
                 href={link.link}
                 className="text-white hover:text-gray-400 duration-300"
