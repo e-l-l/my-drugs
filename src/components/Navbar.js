@@ -14,7 +14,7 @@ export const Navbar = () => {
   ];
   let [show, setShow] = React.useState(false);
   return (
-    <nav className="shadow-md w-full fixed top-0 left-0">
+    <nav className="shadow-md w-full sticky top-0 left-0">
       <div className="md:flex bg-[#13161E] py-4 md:px-10 px-7 text-white items-center justify-between">
         <div className=" font-spacemono font-bold cursor-pointer flex items-center">
           <img src={md} alt="logo" className="h-14" />
