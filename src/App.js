@@ -8,7 +8,6 @@ import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 function App() {
   return (
-    
     <Router>
       <Navbar />
       <Routes>
