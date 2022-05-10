@@ -15,7 +15,7 @@ export const Navbar = () => {
   let [show, setShow] = React.useState(false);
   return (
     <nav className="shadow-md w-full fixed top-0 left-0">
-      <div className="md:flex bg-[#13161E] py-4 md:px-10 px-7 text-white items-center justify-between">
+      <div className="md:flex bg-dBlue py-4 md:px-10 px-7 text-white items-center justify-between">
         <div className=" font-spacemono font-bold cursor-pointer flex items-center">
           <img src={md} alt="logo" className="h-14" />
           <span>myDrugs</span>
@@ -27,7 +27,7 @@ export const Navbar = () => {
           {show ? <IoClose /> : <IoMenu />}
         </div>
         <ul
-          className={`md:flex md:items-center font-spacemono md:pb-0 pb-12 md:static absolute bg-[#13161E] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 transition-all duration-300 ease-in ${
+          className={`md:flex md:items-center font-spacemono md:pb-0 pb-6 md:static absolute bg-dBlue md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 transition-all duration-300 ease-in ${
             show
               ? "top-20 opacity-100"
               : "top-[-490px] opacity-0 md:opacity-100"
@@ -35,7 +35,7 @@ export const Navbar = () => {
         >
           {Links.map((link) => (
             <div className="flex justify-center">
-              <li key={link.name} className="md:ml-8 text-sm md:my-0 my-7">
+              <li key={link.name} className="md:ml-8 text-sm md:my-0 my-5">
                 <a
                   href={link.link}
                   className="text-white hover:text-gray-400 duration-300"
@@ -46,7 +46,7 @@ export const Navbar = () => {
             </div>
           ))}
           <div className="flex justify-center">
-            <li className="text-sm md:my-0 my-7">
+            <li className="text-sm md:my-0 my-5">
               <Button name="login" />
             </li>
           </div>
