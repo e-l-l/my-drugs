@@ -46,7 +46,7 @@ export const Navbar = () => {
             </div>
           ))}
           <div className="flex justify-center">
-            <li className="text-sm md:my-0 my-5">
+            <li key="login" className="text-sm md:my-0 my-5">
               <Button name="login" />
             </li>
           </div>
