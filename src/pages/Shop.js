@@ -1,6 +1,7 @@
 import { collection, doc, getDocs } from "firebase/firestore";
 import React, { useEffect } from "react";
 import { db } from "../firebase";
+import loading from "../images/loading.gif";
 const Shop = () => {
   const [meds, setMeds] = React.useState([]);
   useEffect(() => {
@@ -19,7 +20,7 @@ const Shop = () => {
   return (
     <div className="bg-dBlue min-w-full min-h-screen mt-20 text-white">
       {meds.length === 0 ? (
-        <div>data not there</div>
+        <div className="flex min-h-screen min-w-full justify-center items-center bg-loading"></div>
       ) : (
         <div>{meds[0].name}</div>
       )}

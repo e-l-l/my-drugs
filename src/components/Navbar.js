@@ -1,9 +1,9 @@
 import React from "react";
 import md from "../images/md.png";
 import { Button } from "./Button";
-// import menico from "../images/menu.svg";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 export const Navbar = () => {
   let Links = [
     { name: "home", link: "/" },
@@ -35,18 +35,20 @@ export const Navbar = () => {
         >
           {Links.map((link) => (
             <div className="flex justify-center">
-              <li key={link.name} className="md:ml-8 text-sm md:my-0 my-5">
-                <a
-                  href={link.link}
-                  className="text-white hover:text-gray-400 duration-300"
+              <li className="md:ml-8 text-sm md:my-0 my-5">
+                <NavLink
+                  to={link.link}
+                  className={({ isActive }) =>
+                    isActive ? "text-[#f47983] text-xl duration-100" : ""
+                  }
                 >
                   {link.name}
-                </a>
+                </NavLink>
               </li>
             </div>
           ))}
           <div className="flex justify-center">
-            <li key="login" className="text-sm md:my-0 my-5">
+            <li className="text-sm md:my-0 my-5">
               <Button name="login" />
             </li>
           </div>

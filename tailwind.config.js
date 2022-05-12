@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         backgif: "url(./images/backgif.gif)",
         explode: "url(./images/powder.png)",
+        loading: "url(./images/loading.gif)",
       },
       colors: { dBlue: "#13161E" },
     },
