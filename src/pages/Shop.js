@@ -1,4 +1,4 @@
-import { collection,getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect } from "react";
 import ShopCard from "../components/ShopCard";
 import { db } from "../firebase";
@@ -29,7 +29,16 @@ const Shop = () => {
             Our Products:
           </div>
           <div className="flex p-10">
-            <ShopCard />
+            {/* <ShopCard/> */}
+            {meds.map((med) => (
+              <ShopCard
+                name={med.name}
+                type={med.type}
+                img={med.img}
+                price={med.price}
+                qty={med.quantity}
+              />
+            ))}
           </div>
         </div>
       )}
