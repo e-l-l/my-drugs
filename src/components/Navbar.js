@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import md from "../images/md.png";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import { signInWithGoogle } from "../firebase";
+import { auth, provider } from "../firebase";
+import { signInWithPopup, signOut } from "firebase/auth";
 export const Navbar = () => {
+  const [username, setUsername] = useState(null);
+  const handleSignOut = () => {
+    signOut(auth)
+      .then(function () {
+        console.log("Signed Out");
+        setUsername("");
+      })
+      .catch(function (error) {
+        // An error happened.
+        console.log(error);
+      });
+  };
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const name = result.user.displayName;
+        setUsername(name);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   let Links = [
     { name: "home", link: "/" },
     { name: "safety", link: "/safety" },
@@ -51,12 +76,24 @@ export const Navbar = () => {
             <li className="text-sm md:my-0 my-5">
               <button
                 className="bg-[#6262FF] text-white py-2 px-4 rounded md:ml-8 hover:bg-purple-700 duration-300 text-sm"
-                onClick={signInWithGoogle}
+                onClick={username ? () => {} : signInWithGoogle}
               >
-                login
+                {username ? username : "login"}
               </button>
             </li>
           </div>
+          {username && (
+            <div className="flex justify-center">
+              <li className="text-sm md:my-0 my-5">
+                <button
+                  className=" text-white py-2 px-4 rounded md:ml-4 hover:bg-purple-700 duration-300 text-sm"
+                  onClick={handleSignOut}
+                >
+                  Sign Out
+                </button>
+              </li>
+            </div>
+          )}
         </ul>
       </div>
     </nav>

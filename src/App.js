@@ -5,10 +5,11 @@ import Safety from "./pages/Safety";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
+import React from "react";
 function App() {
   return (
     <Router>
-      <Navbar />
+        <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/safety" element={<Safety />} />
