@@ -1,8 +1,10 @@
-import { collection, doc, getDocs } from "firebase/firestore";
+import { collection,getDocs } from "firebase/firestore";
 import React, { useEffect } from "react";
+import ShopCard from "../components/ShopCard";
 import { db } from "../firebase";
 const Shop = () => {
   const [meds, setMeds] = React.useState([]);
+
   useEffect(() => {
     const fetchMeds = async () => {
       let medList = [];
@@ -25,6 +27,9 @@ const Shop = () => {
           {/* {meds[0].name} */}
           <div className="md:text-4xl font-Montserrat font-bold text-center md:text-left text-2xl px-10 pt-10">
             Our Products:
+          </div>
+          <div className="flex p-10">
+            <ShopCard />
           </div>
         </div>
       )}

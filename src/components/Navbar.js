@@ -1,9 +1,9 @@
 import React from "react";
 import md from "../images/md.png";
-import { Button } from "./Button";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import { signInWithGoogle } from "../firebase";
 export const Navbar = () => {
   let Links = [
     { name: "home", link: "/" },
@@ -49,7 +49,12 @@ export const Navbar = () => {
           ))}
           <div className="flex justify-center">
             <li className="text-sm md:my-0 my-5">
-              <Button name="login" />
+              <button
+                className="bg-[#6262FF] text-white py-2 px-4 rounded md:ml-8 hover:bg-purple-700 duration-300 text-sm"
+                onClick={signInWithGoogle}
+              >
+                login
+              </button>
             </li>
           </div>
         </ul>
