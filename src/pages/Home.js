@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <div className="bg-backgif min-w-screen min-h-screen bg-cover">
-        <div className="min-h-screen flex flex-col md:flex-row items-center justify-evenly md:items-center md:justify-around pt-20">
+        <div className="min-h-screen flex flex-wrap items-center justify-evenly md:items-center md:justify-around pt-20">
           <Card />
           <HomeComps />
         </div>

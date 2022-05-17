@@ -19,7 +19,7 @@ const Shop = () => {
   }, []);
   console.log(meds);
   return (
-    <div className="bg-dBlue min-w-full min-h-screen mt-[5.5rem] text-white">
+    <div className="bg-dBlue min-w-full mt-[5.5rem] text-white">
       {meds.length === 0 ? (
         <div className="flex min-h-screen min-w-full justify-center items-center bg-loading"></div>
       ) : (
@@ -28,7 +28,7 @@ const Shop = () => {
           <div className="md:text-4xl font-Montserrat font-bold text-center md:text-left text-2xl px-10 pt-10">
             Our Products:
           </div>
-          <div className="flex p-10">
+          <div className="min-h-screen flex flex-wrap justify-evenly pt-10">
             {/* <ShopCard/> */}
             {meds.map((med) => (
               <ShopCard

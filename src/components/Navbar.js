@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { auth, provider } from "../firebase";
-import { signInWithPopup, signOut } from "firebase/auth";
+import { signInWithPopup, signOut} from "firebase/auth";
 export const Navbar = () => {
   const [username, setUsername] = useState(null);
   const handleSignOut = () => {
