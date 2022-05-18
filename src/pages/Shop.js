@@ -28,7 +28,7 @@ const Shop = () => {
           <div className="md:text-4xl font-Montserrat font-bold text-center md:text-left text-2xl px-10 pt-10">
             Our Products:
           </div>
-          <div className="min-h-screen flex flex-wrap justify-evenly pt-10">
+          <div className="min-h-screen flex flex-wrap justify-center pt-10">
             {/* <ShopCard/> */}
             {meds.map((med) => (
               <ShopCard
