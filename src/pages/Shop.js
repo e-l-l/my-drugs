@@ -2,6 +2,8 @@ import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect } from "react";
 import ShopCard from "../components/ShopCard";
 import { db } from "../firebase";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 const Shop = () => {
   const [meds, setMeds] = React.useState([]);
 
@@ -25,18 +27,29 @@ const Shop = () => {
       ) : (
         <div>
           {/* {meds[0].name} */}
-          <div className="md:text-4xl font-Montserrat font-bold text-center md:text-left text-2xl px-10 pt-10">
-            Our Products:
+          <div className="flex justify-between md:text-4xl font-Montserrat font-bold text-center md:text-left text-2xl px-16 pt-10">
+            <div>Our Products:</div>{" "}
+            <div className="flex">
+              <NavLink
+                to="/cart"
+                className={({ isActive }) =>
+                  isActive ? "text-[#f47983] text-xl duration-100" : ""
+                }
+              >
+                <AiOutlineShoppingCart />
+              </NavLink>
+            </div>
           </div>
           <div className="min-h-screen flex flex-wrap justify-center pt-10">
-            {/* <ShopCard/> */}
             {meds.map((med) => (
               <ShopCard
+                id={med.id}
                 name={med.name}
                 type={med.type}
                 img={med.img}
                 price={med.price}
                 qty={med.quantity}
+                c={med.c}
               />
             ))}
           </div>

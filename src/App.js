@@ -6,16 +6,18 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 import React from "react";
+import Cart from "./pages/Cart";
 function App() {
   return (
     <Router>
-        <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/safety" element={<Safety />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
