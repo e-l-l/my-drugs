@@ -15,78 +15,70 @@ const FAQ = () => {
               frequently asked questions
             </h1>
             <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              The most common questions about how our business works and what
-              can do for you.
+              the most common questions about how our business works and what we can do for you.
             </p>
           </div>
           <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
             <div class="w-full lg:w-1/2 px-4 py-2">
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4 text-black">
-                  How Long is this site live?
+                  {/* do you really sell drugs? */}
+                  how quick is the delivery?
                 </summary>
 
                 <span>
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  {/* no, you retard. */}
+                  we deliver within 24 hours.
                 </span>
               </details>
               <details class="mb-4">
                 <summary class="font-semibold bg-gray-200 rounded-md py-2 px-4 text-black">
-                  Can I install/upload anything I want on there?
+                  can i sell my products on this platform?
                 </summary>
 
                 <span>
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  no, this isn't amazon. we only sell licensed myDrugs medecines fresh from our factory.
                 </span>
               </details>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4 text-black">
-                  How can I migrate to another site?
+                  how can i be assured that my anonymity is maintained?
                 </summary>
 
                 <span>
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  {/* we only take your email id for payment purposes. we totally aren't selling your personal information on the dark web. */}
+                  we only take your email id for payment purposes. we do not sell your information for profit.
                 </span>
               </details>
             </div>
             <div class="w-full lg:w-1/2 px-4 py-2">
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4 text-black">
-                  Can I change the domain you give me?
+                  how can i be certain that my medecines are pure?
                 </summary>
 
                 <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  {/* check them yourself. */}
+                  our medecines go through three levels of testing in our state-of-the-art facility. you can check them yourself in case of doubt.
                 </span>
               </details>
               <details class="mb-4 text-black">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-                  How many sites I can create at once?
+                  how large-scale is your operation?
                 </summary>
 
-                <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                <span class="px-4 py-2 text-white">
+                  {/* you have no idea. */}
+                  we supply medecines world wide. shipping costs are borne by the customer and vary from country to country.
                 </span>
               </details>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4 text-black">
-                  How can I communicate with you?
+                  how can I communicate with you?
                 </summary>
 
                 <span class="px-4 py-2">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                  you can mail to us at <a href='mailto:someone@example.com'>developer@mydrugs.com</a>
                 </span>
               </details>
             </div>
