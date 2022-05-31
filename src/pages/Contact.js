@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
         <div className="mb-3">
         <div className='flex items-center justify-center'>
-        <DButton title="SUBMIT" href="/contact" />
+        <DButton title="SUBMIT" href="https://www.google.com" />
         </div>
         
         </div>

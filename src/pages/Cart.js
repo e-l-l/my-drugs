@@ -26,7 +26,7 @@ const Cart = () => {
           NO ITEMS IN CART
         </div>
       ) : (
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen justify-center elements-center py-10">
           <div className="w-[50%]">
             {meds.map((med) => (
               <CartElement
@@ -39,7 +39,7 @@ const Cart = () => {
               />
             ))}
           </div>
-          <div className="w-[50%]">hello</div>
+          {/* <div className="w-[50%]">hello</div> */}
         </div>
       )}
     </div>
